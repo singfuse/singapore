@@ -29,11 +29,12 @@ jobs:
       - name: Create PR
         run: |
           if [ $(git rev-parse base) != $(git rev-parse origin/main) ]; then
-            gh pr view base --base main || gh pr create \
-              --title "Merge base changes" \
-              --body "Auto PR for Upstream Changes" \
-              --base main \
-              --head base
+            gh pr list --head base --base main --state open --json number --jq '.[0].number' | grep -q . \
+              || gh pr create \
+                --title "Merge base changes" \
+                --body "Auto PR for Upstream Changes" \
+                --base main \
+                --head base
           else
             echo "No changes to merge."
           fi
