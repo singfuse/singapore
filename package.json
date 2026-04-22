@@ -2,11 +2,21 @@
   "name": "@vinkas/base",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "tsc -p .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest dev"
   },
   "keywords": [
     "vinkas-base"
@@ -35,7 +45,9 @@
   },
   "homepage": "https://github.com/vinkashq/base-node#readme",
   "devDependencies": {
-    "typescript": "^6.0.2"
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.5"
   },
   "packageManager": "pnpm@10.33.0"
 }
