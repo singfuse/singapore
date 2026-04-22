@@ -1,3 +1,3 @@
-export function version() {
-  return "1.0.0"
-}
+import { version } from "../package.json";
+
+export const VERSION = version;

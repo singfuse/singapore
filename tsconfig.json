@@ -10,14 +10,9 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "sourceMap": false
+    "sourceMap": false,
+    "resolveJsonModule": true
   },
-  "include": [
-    "src"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    "**/*.test.ts"
-  ]
+  "include": ["src"],
+  "exclude": ["node_modules", "dist", "**/*.test.ts"]
 }
