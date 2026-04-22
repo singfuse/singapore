@@ -7,18 +7,28 @@ settings:
 importers:
 
   .:
+    dependencies:
+      ky:
+        specifier: ^2.0.2
+        version: 2.0.2
     devDependencies:
       typescript:
         specifier: ^6.0.2
-        version: 6.0.2
+        version: 6.0.3
 
 packages:
 
-  typescript@6.0.2:
-    resolution: {integrity: sha512-bGdAIrZ0wiGDo5l8c++HWtbaNCWTS4UTv7RaTH/ThVIgjkveJt83m74bBHMJkuCbslY8ixgLBVZJIOiQlQTjfQ==}
+  ky@2.0.2:
+    resolution: {integrity: sha512-/GmXpo9F9W+f8n4Ivr2iH+7h7wL7jLbLKWkMlpflcCRb6kGjBfTlASEXaZ9qUgNTn4VgS0P2pwxxzQ4EM6Ulgg==}
+    engines: {node: '>=22'}
+
+  typescript@6.0.3:
+    resolution: {integrity: sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
 snapshots:
 
-  typescript@6.0.2: {}
+  ky@2.0.2: {}
+
+  typescript@6.0.3: {}

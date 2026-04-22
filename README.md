@@ -1,6 +1,5 @@
 #### Node Package
-# Vinkas Base
-**@vinkas/base** node package
+# @singfuse/singapore
 
 ## Setup
 
