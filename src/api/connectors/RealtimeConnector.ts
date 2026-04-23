@@ -1,19 +1,9 @@
-import ky, { KyInstance } from 'ky'
+import { Connector } from './Connector'
 
-export class RealtimeConnector {
-  private _client: KyInstance
+const API_URL = 'https://api-open.data.gov.sg/v2/real-time/api'
 
+export class RealtimeConnector extends Connector {
   constructor() {
-    this._client = ky.create({
-      prefix: this.resolveBaseUrl(),
-    })
-  }
-
-  public resolveBaseUrl(): string {
-    return 'https://api-open.data.gov.sg/v2/real-time/api'
-  }
-
-  public get client(): KyInstance {
-    return this._client
+    super(API_URL)
   }
 }

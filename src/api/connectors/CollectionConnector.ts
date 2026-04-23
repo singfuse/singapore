@@ -1,19 +1,9 @@
-import ky, { KyInstance } from 'ky'
+import { Connector } from './Connector'
 
-export class CollectionConnector {
-  private _client: KyInstance
+const API_URL = 'https://api-production.data.gov.sg/v2/public/api'
 
+export class CollectionConnector extends Connector {
   constructor() {
-    this._client = ky.create({
-      prefix: this.resolveBaseUrl(),
-    })
-  }
-
-  public resolveBaseUrl(): string {
-    return 'https://api-production.data.gov.sg/v2/public/api'
-  }
-
-  public get client(): KyInstance {
-    return this._client
+    super(API_URL)
   }
 }

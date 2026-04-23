@@ -6,9 +6,6 @@ export class GoogleSearch {
 
   public async trending() {
     const request = new Trending()
-    const response = await this.connector.client.get(request.endpoint, {
-      searchParams: request.params,
-    })
-    return await response.json()
+    return await this.connector.get(request.endpoint, request.params)
   }
 }

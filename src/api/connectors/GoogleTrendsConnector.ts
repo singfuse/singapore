@@ -1,19 +1,9 @@
-import ky, { KyInstance } from 'ky'
+import { Connector } from './Connector'
 
-export class GoogleTrendsConnector {
-  private _client: KyInstance
+const API_URL = 'https://trends.google.com/trending'
 
+export class GoogleTrendsConnector extends Connector {
   constructor() {
-    this._client = ky.create({
-      prefix: this.resolveBaseUrl(),
-    })
-  }
-
-  public resolveBaseUrl(): string {
-    return 'https://trends.google.com/trending'
-  }
-
-  public get client(): KyInstance {
-    return this._client
+    super(API_URL)
   }
 }

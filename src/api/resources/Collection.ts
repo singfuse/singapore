@@ -9,9 +9,6 @@ export class Collection {
 
   public async metadata() {
     const request = new Metadata(this.collectionId)
-    const response = await this.connector.client.get(request.endpoint, {
-      searchParams: request.params,
-    })
-    return await response.json()
+    return await this.connector.get(request.endpoint, request.params)
   }
 }
