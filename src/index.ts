@@ -1,4 +1,4 @@
-export * from './open-data'
+export * from './api'
 export * from './data'
 
 import { version } from '../package.json'

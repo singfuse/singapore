@@ -1,19 +1,17 @@
 import ky, { KyInstance, SearchParamsOption } from 'ky'
 
-abstract class Client {
+abstract class BaseClient {
   protected _instance: KyInstance
 
   constructor(
     protected readonly apiUrl: string,
-    protected readonly apiKey?: string,
+    protected readonly headers: Record<string, string>,
   ) {
     if (!apiUrl) throw new Error('apiUrl is required')
 
-    const headers: Record<string, string> = {}
-    if (this.apiKey) headers['X-Api-Key'] = this.apiKey
     this._instance = ky.create({
       prefix: this.apiUrl,
-      headers,
+      headers: this.headers,
       timeout: 8000,
       retry: {
         limit: 1,
@@ -36,4 +34,4 @@ abstract class Client {
   }
 }
 
-export default Client
+export default BaseClient
