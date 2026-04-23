@@ -9,10 +9,12 @@ import { GoogleSearch } from './resources/GoogleSearch'
 import { Weather } from './resources/Weather'
 
 export class Api {
+  constructor(private readonly apiKey?: string) {}
+
   private _realtimeClient: RealtimeClient | null = null
   public realtimeClient(): RealtimeClient {
     if (!this._realtimeClient) {
-      this._realtimeClient = new RealtimeClient()
+      this._realtimeClient = new RealtimeClient(this.apiKey)
     }
     return this._realtimeClient
   }
@@ -20,7 +22,7 @@ export class Api {
   private _collectionClient: CollectionClient | null = null
   public collectionClient(): CollectionClient {
     if (!this._collectionClient) {
-      this._collectionClient = new CollectionClient()
+      this._collectionClient = new CollectionClient(this.apiKey)
     }
     return this._collectionClient
   }
@@ -28,7 +30,7 @@ export class Api {
   private _datasetClient: DatasetClient | null = null
   public datasetClient(): DatasetClient {
     if (!this._datasetClient) {
-      this._datasetClient = new DatasetClient()
+      this._datasetClient = new DatasetClient(this.apiKey)
     }
     return this._datasetClient
   }
@@ -36,7 +38,7 @@ export class Api {
   private _googleTrendsClient: GoogleTrendsClient | null = null
   public googleTrendsClient(): GoogleTrendsClient {
     if (!this._googleTrendsClient) {
-      this._googleTrendsClient = new GoogleTrendsClient()
+      this._googleTrendsClient = new GoogleTrendsClient(this.apiKey)
     }
     return this._googleTrendsClient
   }
