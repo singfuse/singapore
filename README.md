@@ -12,8 +12,8 @@ To contribute or run the project locally:
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/vinkashq/base-node.git
-   cd base-node
+   git clone https://github.com/singfuse/singapore.git
+   cd singapore
    ```
 
 2. **Install dependencies:**
