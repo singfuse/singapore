@@ -43,6 +43,10 @@
     "LICENSE",
     "package.json"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinkashq/base-node"
+  },
   "bugs": {
     "url": "https://github.com/vinkashq/base-node/issues"
   },
