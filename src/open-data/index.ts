@@ -8,7 +8,11 @@ import { Dataset } from './resources/Dataset'
 import { GoogleSearch } from './resources/GoogleSearch'
 import { Weather } from './resources/Weather'
 
-export class Api {
+/**
+ * Singapore government datasets and APIs from open data portal.
+ * https://data.gov.sg
+ */
+export class OpenData {
   constructor(private readonly apiKey?: string) {}
 
   private _realtimeClient: RealtimeClient | null = null
