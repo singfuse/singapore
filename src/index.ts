@@ -1,5 +1,5 @@
 export * from './api'
-export * from './data/areas'
+export * from './data'
 
 import { version } from '../package.json'
 
