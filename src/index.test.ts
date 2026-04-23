@@ -1,8 +1,8 @@
-import { describe, expect, it } from "vitest";
-import { VERSION } from "./index";
+import { describe, expect, it } from 'vitest'
+import { VERSION } from './index'
 
-describe("package", () => {
-  it("should have version", () => {
-    expect(VERSION).toBeTruthy();
-  });
-});
+describe('package', () => {
+  it('should have version', () => {
+    expect(VERSION).toBeTruthy()
+  })
+})
