@@ -1,13 +1,13 @@
 export class Trending {
-    constructor() { }
+  constructor() {}
 
-    public get endpoint(): string {
-        return "/rss";
-    }
+  public get endpoint(): string {
+    return '/rss'
+  }
 
-    public get params(): Record<string, any> {
-        return {
-            geo: 'SG'
-        };
+  public get params(): Record<string, any> {
+    return {
+      geo: 'SG',
     }
+  }
 }

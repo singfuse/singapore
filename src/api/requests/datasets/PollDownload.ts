@@ -1,11 +1,11 @@
 export class PollDownload {
-    constructor(private datasetId: string) { }
+  constructor(private datasetId: string) {}
 
-    public get endpoint(): string {
-        return `/datasets/${this.datasetId}/poll-download`;
-    }
+  public get endpoint(): string {
+    return `/datasets/${this.datasetId}/poll-download`
+  }
 
-    public get params(): Record<string, any> {
-        return {};
-    }
+  public get params(): Record<string, any> {
+    return {}
+  }
 }

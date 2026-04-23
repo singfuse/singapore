@@ -1,11 +1,11 @@
 export class Metadata {
-    constructor(private collectionId: string) { }
+  constructor(private collectionId: string) {}
 
-    public get endpoint(): string {
-        return `/collections/${this.collectionId}/metadata`;
-    }
+  public get endpoint(): string {
+    return `/collections/${this.collectionId}/metadata`
+  }
 
-    public get params(): Record<string, any> {
-        return {};
-    }
+  public get params(): Record<string, any> {
+    return {}
+  }
 }
