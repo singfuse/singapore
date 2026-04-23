@@ -1,20 +1,20 @@
-import { DatasetConnector } from '../clients/DatasetClient'
+import DatasetClient from '../clients/DatasetClient'
 import { InitiateDownload } from '../requests/datasets/InitiateDownload'
 import { PollDownload } from '../requests/datasets/PollDownload'
 
 export class Dataset {
   constructor(
-    private connector: DatasetConnector,
+    private client: DatasetClient,
     private datasetId: string,
   ) {}
 
   public async initiateDownload() {
     const request = new InitiateDownload(this.datasetId)
-    return await this.connector.get(request.endpoint, request.params)
+    return await this.client.get(request.endpoint, request.params)
   }
 
   public async pollDownload() {
     const request = new PollDownload(this.datasetId)
-    return await this.connector.get(request.endpoint, request.params)
+    return await this.client.get(request.endpoint, request.params)
   }
 }
