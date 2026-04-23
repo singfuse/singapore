@@ -1,6 +1,6 @@
 {
   "name": "@singfuse/singapore",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "TypeScript SDK for Singapore's open data API",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
