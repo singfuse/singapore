@@ -1,47 +1,72 @@
 {
-    "name": "@singfuse/singapore",
-    "version": "1.0.0",
-    "description": "TypeScript SDK for Singapore's open data API",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "tsc -p .",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [
-        "singapore",
-        "sdk",
-        "api",
-        "open-data"
-    ],
-    "author": {
-        "name": "Vinkas",
-        "email": "contact@vinkas.com",
-        "url": "https://vinkas.com"
-    },
-    "contributors": [
-        {
-            "name": "Vinoth Kannan",
-            "email": "vinoth.kannan@vinkas.com",
-            "url": "https://vinothkannan.com"
-        }
-    ],
-    "license": "MIT",
-    "files": [
-        "dist",
-        "README.md",
-        "LICENSE",
-        "package.json"
-    ],
-    "bugs": {
-        "url": "https://github.com/singfuse/singapore/issues"
-    },
-    "homepage": "https://github.com/singfuse/singapore#readme",
-    "packageManager": "pnpm@10.33.0",
-    "devDependencies": {
-        "typescript": "^6.0.2"
-    },
-    "dependencies": {
-        "ky": "^2.0.2"
+  "name": "@singfuse/singapore",
+  "version": "1.0.0",
+  "description": "TypeScript SDK for Singapore's open data API",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
     }
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "typecheck": "tsc --noEmit",
+    "build": "tsup",
+    "test": "vitest run",
+    "test:watch": "vitest dev",
+    "prepare": "husky"
+  },
+  "keywords": [
+    "singapore",
+    "sdk",
+    "api",
+    "open-data"
+  ],
+  "author": {
+    "name": "Vinkas",
+    "email": "contact@vinkas.com",
+    "url": "https://vinkas.com"
+  },
+  "contributors": [
+    {
+      "name": "Vinoth Kannan",
+      "email": "vinoth.kannan@vinkas.com",
+      "url": "https://vinothkannan.com"
+    }
+  ],
+  "license": "MIT",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/singfuse/singapore"
+  },
+  "bugs": {
+    "url": "https://github.com/singfuse/singapore/issues"
+  },
+  "homepage": "https://github.com/singfuse/singapore#readme",
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  },
+  "dependencies": {
+    "ky": "^2.0.2"
+  },
+  "lint-staged": {
+    "*.{ts,json,md}": "prettier --write"
+  },
+  "packageManager": "pnpm@10.33.1"
 }
