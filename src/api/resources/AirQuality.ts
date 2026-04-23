@@ -7,19 +7,17 @@ export class AirQuality {
 
   public async psi(date?: string, paginationToken?: string) {
     const request = new PSI(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async pm25(date?: string, paginationToken?: string) {
     const request = new PM25(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 }

@@ -14,82 +14,73 @@ export class Weather {
 
   public async airTemperature(date?: string, paginationToken?: string) {
     const request = new AirTemperature(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async fourDayForecast(date?: string, paginationToken?: string) {
     const request = new FourDayForecast(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async rainfall(date?: string, paginationToken?: string) {
     const request = new Rainfall(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async relativeHumidity(date?: string, paginationToken?: string) {
     const request = new RelativeHumidity(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async twentyFourHourForecast(date?: string, paginationToken?: string) {
     const request = new TwentyFourHourForecast(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async twoHourForecast(date?: string, paginationToken?: string) {
     const request = new TwoHourForecast(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async uvIndex(date?: string, paginationToken?: string) {
     const request = new UVIndex(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async windDirection(date?: string, paginationToken?: string) {
     const request = new WindDirection(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async windSpeed(date?: string, paginationToken?: string) {
     const request = new WindSpeed(date, paginationToken)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 }

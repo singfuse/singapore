@@ -10,19 +10,17 @@ export class Dataset {
 
   public async initiateDownload() {
     const request = new InitiateDownload(this.datasetId)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 
   public async pollDownload() {
     const request = new PollDownload(this.datasetId)
-    return (
-      await this.connector.client.get(request.endpoint, {
-        searchParams: request.params,
-      })
-    ).json()
+    const response = await this.connector.client.get(request.endpoint, {
+      searchParams: request.params,
+    })
+    return await response.json()
   }
 }
