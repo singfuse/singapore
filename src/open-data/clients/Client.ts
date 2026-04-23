@@ -7,11 +7,19 @@ abstract class Client {
     protected readonly apiUrl: string,
     protected readonly apiKey?: string,
   ) {
+    if (!apiUrl) throw new Error('apiUrl is required')
+
     const headers: Record<string, string> = {}
     if (this.apiKey) headers['X-Api-Key'] = this.apiKey
     this._instance = ky.create({
       prefix: this.apiUrl,
       headers,
+      timeout: 8000,
+      retry: {
+        limit: 1,
+        statusCodes: [408, 413, 429, 500, 502, 503, 504],
+      },
+      throwHttpErrors: true,
     })
   }
 
