@@ -1,8 +1,8 @@
-import { Connector } from './Connector'
+import Client from './Client'
 
 const API_URL = 'https://api-production.data.gov.sg/v2/public/api'
 
-export class DatasetConnector extends Connector {
+export default class DatasetClient extends Client {
   constructor() {
     super(API_URL)
   }

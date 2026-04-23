@@ -1,4 +1,4 @@
-import { RealtimeConnector } from '../connectors/RealtimeConnector'
+import { RealtimeConnector } from '../clients/RealtimeClient'
 import { PSI } from '../requests/air-quality/PSI'
 import { PM25 } from '../requests/air-quality/PM25'
 

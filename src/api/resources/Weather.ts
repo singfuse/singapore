@@ -1,4 +1,4 @@
-import { RealtimeConnector } from '../connectors/RealtimeConnector'
+import { RealtimeConnector } from '../clients/RealtimeClient'
 import { AirTemperature } from '../requests/weather/AirTemperature'
 import { FourDayForecast } from '../requests/weather/FourDayForecast'
 import { Rainfall } from '../requests/weather/Rainfall'

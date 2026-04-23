@@ -1,4 +1,4 @@
-import { DatasetConnector } from '../connectors/DatasetConnector'
+import { DatasetConnector } from '../clients/DatasetClient'
 import { InitiateDownload } from '../requests/datasets/InitiateDownload'
 import { PollDownload } from '../requests/datasets/PollDownload'
 

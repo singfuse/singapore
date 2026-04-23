@@ -1,25 +1,25 @@
 import ky, { KyInstance, SearchParamsOption } from 'ky'
 
-abstract class Connector {
-  protected _client: KyInstance
+abstract class Client {
+  protected _instance: KyInstance
 
   constructor(protected readonly apiUrl: string) {
-    this._client = ky.create({
+    this._instance = ky.create({
       prefix: this.apiUrl,
     })
   }
 
   public get client(): KyInstance {
-    return this._client
+    return this._instance
   }
 
   public async get(
     endpoint: string,
     searchParams?: SearchParamsOption,
   ): Promise<any> {
-    const response = await this._client.get(endpoint, { searchParams })
+    const response = await this._instance.get(endpoint, { searchParams })
     return await response.json()
   }
 }
 
-export { Connector }
+export default Client

@@ -1,4 +1,4 @@
-import { CollectionConnector } from '../connectors/CollectionConnector'
+import { CollectionConnector } from '../clients/CollectionClient'
 import { Metadata } from '../requests/collections/Metadata'
 
 export class Collection {

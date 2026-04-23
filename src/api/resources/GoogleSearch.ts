@@ -1,4 +1,4 @@
-import { GoogleTrendsConnector } from '../connectors/GoogleTrendsConnector'
+import { GoogleTrendsConnector } from '../clients/GoogleTrendsClient'
 import { Trending } from '../requests/google-search/Trending'
 
 export class GoogleSearch {
