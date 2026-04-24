@@ -57,7 +57,7 @@
   "bugs": {
     "url": "https://github.com/singfuse/singapore/issues"
   },
-  "homepage": "https://github.com/singfuse/singapore#readme",
+  "homepage": "https://singfuse.github.io/singapore/",
   "devDependencies": {
     "husky": "^9.1.7",
     "lint-staged": "^16.4.0",
