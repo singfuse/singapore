@@ -20,7 +20,10 @@
     "build": "tsup",
     "test": "vitest run",
     "test:watch": "vitest dev",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
   },
   "keywords": [
     "singapore",
@@ -61,6 +64,7 @@
     "prettier": "^3.8.3",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3",
+    "vitepress": "^1.6.4",
     "vitest": "^4.1.5"
   },
   "dependencies": {
