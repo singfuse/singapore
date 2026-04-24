@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/singapore/',
   title: 'Singapore Data SDK',
   description:
     "Unofficial TypeScript/JavaScript SDK for Singapore Government's Open Data and LTA DataMall APIs.",
