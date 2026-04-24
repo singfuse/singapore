@@ -29,5 +29,10 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/singfuse/singapore' },
     ],
+
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'Copyright &copy; 2026-present Vinkas Technologies Pte. Ltd.',
+    },
   },
 })
